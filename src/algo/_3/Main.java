@@ -33,6 +33,7 @@ public class Main {
         String answer = "";
         int m = Integer.MIN_VALUE, pos;
 
+        // case 2
         while((pos=str.indexOf(' ')) != -1){  // indexOf() : 띄어쓰기 발견 못하면 -1 리턴함 발견하면 index return
             String tmp = str.substring(0, pos);
             int len  = tmp.length();
@@ -47,7 +48,7 @@ public class Main {
             answer = str;
         }
 
-// 1.
+// case 1
 //        String[] s = str.split(" ");
 //        for (String x : s) {
 //            //System.out.println(x);

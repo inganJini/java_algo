@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="algo" target="1.8" />
+      <module name="algo.main" target="1.8" />
+      <module name="algo.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
