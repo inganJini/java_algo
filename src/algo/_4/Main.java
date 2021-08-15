@@ -31,11 +31,20 @@
 package algo._4;
 
 import java.util.Scanner;
-import java.util.regex.MatchResult;
 
 public class Main {
     public String Solution(int cnt, String[] str) {
         String answer = "";
+
+        for (int i = 0; i < cnt; i++){
+            int len = str[i].length();
+            char sArr [] = str[i].toCharArray();
+            String tmp = "";
+            for (int j = len-1; j > -1; j--){
+                tmp += sArr[j];
+            }
+            answer += tmp + "\n";
+        }
 
         return answer;
     }
@@ -50,10 +59,6 @@ public class Main {
         for (int i = 0; i < cnt; i++){
             str[i] = sc.nextLine();
         }
-
-//        for (int j = 0; j < str.length; j++){
-//            System.out.println(str[j]);
-//        }
 
         System.out.println(T.Solution(cnt, str));
     }
