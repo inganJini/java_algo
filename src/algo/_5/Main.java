@@ -35,21 +35,42 @@ public class Main {
 
     public String Solution(String str) {
         String answer = "";
-        int len = str.length();
-        String[] result = new String[len];
-        String[] sArr = str.split("");
+        int lp = 0;
+        int rp = str.length()-1;
+        char[] x = str.toCharArray();
+        //String[] result = new String[rp];
 
-        for (int i = 0; i < len; i++){
-            if (sArr[i].matches("[a-z|A-Z]")){
-                result[len-i-1] = sArr[i];
-            } else {
-                result[i] = sArr[i];
+        while(lp < rp) {
+            if (!Character.isAlphabetic(x[lp])) lp++;
+            else if (!Character.isAlphabetic(x[rp])) rp--;
+            else {
+                char tmp = x[lp];
+                x[lp] = x[rp];
+                x[rp] = tmp;
+                lp++;
+                rp--;
             }
         }
 
-        for (int j = 0; j < len; j++){
-            answer += result[j];
-        }
+        answer = String.valueOf(x);
+
+
+        // int len = str.length();
+        // String[] result = new String[len];
+        // String[] sArr = str.split("");
+
+        // case 1 -> 통과되지 않음  -> 2 pointer로 해결해야함
+        //for (int i = 0; i < len; i++){
+        //    if (sArr[i].matches("[a-z|A-Z]")){
+        //        result[len-i-1] = sArr[i];
+        //    } else {
+        //        result[i] = sArr[i];
+        //    }
+        //}
+        //
+        //for (int j = 0; j < len; j++){
+        //    answer += result[j];
+        //}
 
         return answer;
     }
