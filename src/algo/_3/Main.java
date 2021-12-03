@@ -34,7 +34,7 @@ public class Main {
         int m = Integer.MIN_VALUE, pos;
 
         // case 2
-        while((pos=str.indexOf(' ')) != -1){  // indexOf() : 띄어쓰기 발견 못하면 -1 리턴함 발견하면 index return
+        while((pos=str.indexOf(' ')) != -1){  // indexOf() : 띄어쓰기 발견 못하면 -1 리턴함 // 발견하면 index return
             String tmp = str.substring(0, pos);
             int len  = tmp.length();
             if (len > m) {
@@ -44,7 +44,7 @@ public class Main {
             str = str.substring(pos+1);
         }
 
-        if (str.length() > m) {
+        if (str.length() > m) {   // 마지막은 indexOf에 안걸리기 때문에   if 문 필요
             answer = str;
         }
 
