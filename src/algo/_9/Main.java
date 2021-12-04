@@ -55,11 +55,7 @@ package algo._9;
 import java.util.Scanner;
 
 public class Main {
-<<<<<<< HEAD
-    public String Solution (String str){
-        String answer = "";
-=======
-    
+
     public int Solution(String str) {
         int answer = 0;
         str = str.toUpperCase().replaceAll("[A-Z]", "");
@@ -67,24 +63,14 @@ public class Main {
         System.out.println(str);
 
         answer = Integer.parseInt(str);
->>>>>>> 3ca4dd22dc85f9241f799f5482c4ed73d19c7ba7
 
         return answer;
     }
 
     public static void main(String[] args) {
-<<<<<<< HEAD
-        Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
-
-        System.out.println(T.Solution(input));
-    }
-=======
        Main T = new Main();
        Scanner sc = new Scanner(System.in);
        String input = sc.nextLine();
        System.out.println(T.Solution(input));
    }
->>>>>>> 3ca4dd22dc85f9241f799f5482c4ed73d19c7ba7
 }
